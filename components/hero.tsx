@@ -11,7 +11,7 @@ const Hero = () => {
                     Hi 😊,
                 </Text>
                 <Text className="text-8xl font-extrabold text-emerald" type="title_1">
-                    I'm
+                    I&apos;m
                     <br />
                     David Osorio
                 </Text>
