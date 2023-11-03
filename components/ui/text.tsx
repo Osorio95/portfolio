@@ -1,21 +1,28 @@
 import React from 'react';
+import classNames from 'classnames'; // Necesitarás la librería 'classnames'
 
 type Props = {
-    type?: 'title_1' | 'title_2'
+    variant?: 'h1' | 'h2' | 'p'
     children: React.ReactNode
     className?: string
 }
 
-const Text = ({ type, children, className }: Props) => {
-    switch (type) {
-        case 'title_1':
-            return <h1 className={className}>{children}</h1>;
-        case 'title_2':
-            return <h2 className={className}>{children}</h2>;
-        // puedes agregar más casos si necesitas otros tipos de títulos
-        default:
-            return <p className={className}>{children}</p>; // por defecto se renderiza un párrafo
-    }
+const Text = ({ variant = 'p', children, className }: Props) => {
+    const Component = variant;
+
+    const variantClasses = {
+        h1: 'text-7xl font-extrabold',
+        h2: 'text-4xl',
+        p: 'text-md',
+    };
+
+    const combinedClassName = classNames(variantClasses[variant], className);
+
+    return (
+        <Component className={combinedClassName}>
+            {children}
+        </Component>
+    )
 };
 
 export default Text;

@@ -80,6 +80,7 @@ const config: Config = {
 		},
 	},
 	plugins: [
+		require('@headlessui/tailwindcss'),
 		iconsPlugin({
 			// Select the icon collections you want to use
 			// You can also ignore this option to automatically discover all icon collections you have installed
