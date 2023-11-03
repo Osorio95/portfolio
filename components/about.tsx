@@ -46,8 +46,8 @@ const About = () => {
                     My focus
                 </Text>
                 <ul className='grid grid-cols-12 gap-16'>
-                    {texts.map(text =>
-                        <li className='col-span-4'>
+                    {texts.map((text, idx) =>
+                        <li key={idx} className='col-span-4'>
                             <Text className='font-bold'>
                                 {text.title}
                             </Text>

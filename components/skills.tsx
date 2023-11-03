@@ -55,8 +55,8 @@ const Skills = () => {
             </div>
             <div className="relative">
                 <Slider {...settings} >
-                    {techStack.map((element) =>
-                        <SkillElement image={element.path} text={element.name} />
+                    {techStack.map((element, idx) =>
+                        <SkillElement key={idx} image={element.path} text={element.name} />
                     )}
                 </Slider>
                 <div className="absolute top-0 bottom-0 left-0 bg-gradient-to-r from-night to-night/0 w-16 z-10 pointer-events-none"></div>
