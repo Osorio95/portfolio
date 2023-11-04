@@ -34,8 +34,8 @@ const Footer = () => {
                         I'm always interested in
                     </Text>
                     <div className="flex flex-wrap gap-4">
-                        {buttons.map(button => (
-                            <Button variant='transparent'>
+                        {buttons.map((button, idx) => (
+                            <Button key={idx} variant='transparent'>
                                 <Text variant='lato-2'>
                                     {button}
                                 </Text>
@@ -55,8 +55,8 @@ const Footer = () => {
                     </Button>
                 </div>
                 <div className="flex flex-wrap gap-8 self-end">
-                    {socials.map(social => (
-                        <Link href={social.url}>
+                    {socials.map((social, idx) => (
+                        <Link key={idx} href={social.url}>
                             <Text variant='lato-2' className='uppercase'>
                                 {social.name}
                             </Text>

@@ -26,8 +26,8 @@ const SelectedCases = () => {
             </Text>
 
             <Slider {...settings}>
-                {projects.map(project => (
-                    <div className="">
+                {projects.map((project, idx) => (
+                    <div key={idx} className="">
                         <div className='flex justify-center items-center w-full h-[256px]'>
                             <div className="grid grid-cols-8 w-full">
                                 <div className="col-start-2 col-span-4 flex flex-col">
