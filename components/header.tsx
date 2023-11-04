@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import Navbar from './header/navbar'
-import DarkMode from './header/darkmode'
 import Text from './ui/text'
 
 const MainHeader = () => {
