@@ -23,7 +23,7 @@ const Hero = () => {
             </div>
             <div className="col-span-3 self-end">
                 <Text className='text-right' variant='playfair-1'>
-                    I'm David Osorio
+                    I&apos;m David Osorio
                     <br />
                     React, Vue & SvelteWeb
                     <br />

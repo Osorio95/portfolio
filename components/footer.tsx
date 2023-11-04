@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="col-span-4 flex flex-col gap-6">
                 <div className="flex flex-col gap-4">
                     <Text variant='playfair-1'>
-                        I'm always interested in
+                        I&apos;'m always interested in
                     </Text>
                     <div className="flex flex-wrap gap-4">
                         {buttons.map((button, idx) => (
