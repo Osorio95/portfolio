@@ -22,7 +22,7 @@ const Footer = () => {
         <footer className='grid grid-cols-8'>
             <div className="col-span-4 flex flex-col -mt-12 pt-1">
                 <Text variant='tusker-2'>
-                    LET'S
+                    LET&apos;S
                 </Text>
                 <Text className='-mt-16' variant='tusker-2'>
                     CONNECT!
@@ -46,7 +46,7 @@ const Footer = () => {
 
                 <div className="flex items-center self-end gap-4 uppercase">
                     <Text variant='lato-2'>
-                        I'm always interested in
+                        I&apos;m always interested in
                     </Text>
                     <Button variant='filled'>
                         <Text className='text-custom-black' variant='lato-2'>
