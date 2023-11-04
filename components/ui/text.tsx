@@ -1,22 +1,43 @@
 import React from 'react';
-import classNames from 'classnames'; // Necesitarás la librería 'classnames'
+import classNames from 'classnames';
+
+type Variant =
+    'tusker-1' |
+    'tusker-2' |
+    'tusker-3' |
+    'tusker-4' |
+    'playfair-1' |
+    'playfair-2' |
+    'lato-1' |
+    'lato-2' |
+    'lato-3'
 
 type Props = {
-    variant?: 'h1' | 'h2' | 'p'
+    variant?: Variant
     children: React.ReactNode
     className?: string
 }
 
-const Text = ({ variant = 'p', children, className }: Props) => {
-    const Component = variant;
+type Comp = Record<Variant, { component: keyof JSX.IntrinsicElements, classes: string }>
 
-    const variantClasses = {
-        h1: 'text-7xl font-extrabold',
-        h2: 'text-4xl',
-        p: 'text-md',
+const Text = ({ variant = 'lato-1', children, className }: Props) => {
+
+    const variants: Comp = {
+        'tusker-1': { component: 'h1', classes: 'font-tusker text-[186px] 2xl:text-[196px] font-bold uppercase' },
+        'tusker-2': { component: 'h2', classes: 'font-tusker text-[124px] 2xl:text-[152px] font-bold uppercase' },
+        'tusker-3': { component: 'h3', classes: 'font-tusker text-[64px] font-bold uppercase' },
+        'tusker-4': { component: 'h3', classes: 'font-tusker text-[18px] font-bold uppercase' },
+        'playfair-1': { component: 'h5', classes: 'font-playFair text-[24px]' },
+        'playfair-2': { component: 'h5', classes: 'font-playFair text-[20px]' },
+        'lato-1': { component: 'p', classes: 'font-lato text-[24px]' },
+        'lato-2': { component: 'p', classes: 'font-lato text-[20px]' },
+        'lato-3': { component: 'p', classes: 'font-lato text-[14px]' }
     };
 
-    const combinedClassName = classNames(variantClasses[variant], className);
+    const Component = variants[variant].component;
+    const variantClasses = variants[variant].classes;
+
+    const combinedClassName = classNames(variantClasses, className);
 
     return (
         <Component className={combinedClassName}>

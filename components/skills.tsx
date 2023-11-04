@@ -37,7 +37,7 @@ const Skills = () => {
         infinite: true,
         speed: 9000,
         autoplay: true,
-        slidesToShow: 5,
+        slidesToShow: 8,
         slidesToScroll: 1,
         pauseOnHover: false,
         cssEase: 'linear'
@@ -45,22 +45,24 @@ const Skills = () => {
 
     return (
         <section className="w-full">
-            <div className="flex flex-col gap-8">
-                <Text variant="h1">
-                    My skills
-                </Text>
-                <Text>
-                    Part of the stack that I&apos;m familiar with
-                </Text>
-            </div>
-            <div className="relative">
-                <Slider {...settings} >
-                    {techStack.map((element, idx) =>
-                        <SkillElement key={idx} image={element.path} text={element.name} />
-                    )}
-                </Slider>
-                <div className="absolute top-0 bottom-0 left-0 bg-gradient-to-r from-night to-night/0 w-16 z-10 pointer-events-none"></div>
-                <div className="absolute top-0 bottom-0 right-0 bg-gradient-to-l from-night to-night/0 w-16 z-10 pointer-events-none"></div>
+            <Text variant="playfair-1">
+                Proficient in key components of the Technology Stack
+            </Text>
+            <div className="relative -mx-64 my-32">
+                <div className="-z-10 bg-custom-white opacity-25 translate-y-12 -rotate-6">
+                    <Slider {...settings} >
+                        {techStack.map((element, idx) =>
+                            <SkillElement key={idx} image={element.path} text={element.name} />
+                        )}
+                    </Slider>
+                </div>
+                <div className="z-20 bg-custom-white rotate-6">
+                    <Slider {...settings} >
+                        {techStack.reverse().map((element, idx) =>
+                            <SkillElement key={idx} image={element.path} text={element.name} />
+                        )}
+                    </Slider>
+                </div>
             </div>
         </section>
     )

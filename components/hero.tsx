@@ -5,33 +5,38 @@ import Image from 'next/image'
 
 const Hero = () => {
     return (
-        <section id="header" className="w-full flex justify-between pt-48">
-            <div className="flex flex-col justify-center">
-                <Text className="text-4xl font-extrabold" variant="h2">
-                    Hi 😁,
-                </Text>
-                <Text className="text-8xl font-extrabold text-emerald" variant="h1">
-                    I&apos;m
-                    <br />
-                    David Osorio
-                </Text>
-                <Text className="text-4xl font-extrabold my-6" variant="h2">
-                    React, Vue, Svelte
-                    <br />
-                    Web developer
-                </Text>
-                <div className="flex flex-col gap-4">
-                    <Button color="bg-lavender text-night">
-                        Contact me
-                    </Button>
-                    <Button color="bg-powder_blue text-night">
-                        Download resume
-                    </Button>
+        <section id="header" className="w-full grid grid-cols-12 pt-24">
+            <div className="col-span-9">
+                <div className="flex flex-row items-center">
+                    <Text variant='tusker-1'>
+                        FRONT
+                    </Text>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                        <path d="M7.61493 46.4269L46.6149 7.42691" stroke="#C8C8C8" stroke-width="20" />
+                    </svg>
+                    <Text variant='tusker-1'>
+                        END
+                    </Text>
                 </div>
+                <Text className='-mt-16 -mb-6' variant='tusker-1'>
+                    DEVELOPER
+                </Text>
             </div>
-            <div className='relative flex flex-col'>
-                <Image className='drop-shadow-xl' width={512} height={512} alt='David Osorio' src={'/images/image.png'} />
-                <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-night to-night/5 "></div>
+            <div className="col-span-3 self-end">
+                <Text className='text-right' variant='playfair-1'>
+                    I'm David Osorio
+                    <br />
+                    React, Vue & SvelteWeb
+                    <br />
+                    developer
+                </Text>
+            </div>
+            <div className="col-span-12 mt-12">
+                <Button variant='transparent'>
+                    <Text variant='lato-1'>
+                        Contact me
+                    </Text>
+                </Button>
             </div>
         </section>
     )

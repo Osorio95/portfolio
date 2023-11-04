@@ -1,13 +1,47 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
-import './globals.css'
+import { Lato, Playfair_Display } from 'next/font/google'
+import localFont from 'next/font/local'
 import Provider from '@/components/provider/theme-provider'
+import './globals.css'
 
-const cs = Roboto({
+const tusker = localFont({
+	src: [
+		{
+			path: '../public/fonts/TuskerGrotesk-5500Medium.ttf',
+			weight: '500',
+			style: 'medium'
+		},
+		{
+			path: '../public/fonts/TuskerGrotesk-5600Semibold.ttf',
+			weight: '600',
+			style: 'semibold'
+		},
+		{
+			path: '../public/fonts/TuskerGrotesk-5700Bold.ttf',
+			weight: '700',
+			style: 'bold'
+		},
+		{
+			path: '../public/fonts/TuskerGrotesk-5800Super.ttf',
+			weight: '800',
+			style: 'super'
+		}
+	],
+	variable: '--font-tusker'
+})
+
+const lato = Lato({
+	weight: ['400'],
+	style: ['normal'],
+	subsets: ['latin'],
+	variable: '--font-lato'
+})
+
+const playfairDisplay = Playfair_Display({
 	weight: ['400', '700'],
 	style: ['normal'],
 	subsets: ['latin'],
-	display: 'swap',
+	variable: '--font-playfair'
 })
 
 export const metadata: Metadata = {
@@ -17,9 +51,9 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="en">
 			<head />
-			<body className={cs.className}>
+			<body className={`${tusker.variable} ${lato.variable} ${playfairDisplay.variable}`}>
 				<Provider
 					attribute="class"
 					defaultTheme="system"
