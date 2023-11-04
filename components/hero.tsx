@@ -1,7 +1,6 @@
 import React from 'react'
 import Text from './ui/text'
 import Button from './ui/button'
-import Image from 'next/image'
 
 const Hero = () => {
     return (
@@ -12,7 +11,7 @@ const Hero = () => {
                         FRONT
                     </Text>
                     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
-                        <path d="M7.61493 46.4269L46.6149 7.42691" stroke="#C8C8C8" stroke-width="20" />
+                        <path d="M7.61493 46.4269L46.6149 7.42691" stroke="#C8C8C8" strokeWidth="20" />
                     </svg>
                     <Text variant='tusker-1'>
                         END

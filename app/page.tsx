@@ -10,13 +10,13 @@ import Skills from "@/components/skills"
 const Home = () => {
 
 	return (
-		<main className="relative flex flex-col gap-40 dark:bg-custom-black text-custom-white px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36 overflow-hidden">
+		<main className="relative flex flex-col gap-40 bg-custom-black text-custom-white px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36 overflow-hidden">
 			<MainHeader />
 			<Hero />
 			<About />
 			<Focus />
 			<Skills />
-			<SelectedCases />
+			{/* <SelectedCases /> */}
 			<div className="bg-custom-white h-2 -mx-64"></div>
 			<Footer />
 		</main>

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Lato, Playfair_Display } from 'next/font/google'
 import localFont from 'next/font/local'
-import Provider from '@/components/provider/theme-provider'
 import './globals.css'
 
 const tusker = localFont({
@@ -54,13 +53,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 		<html lang="en">
 			<head />
 			<body className={`${tusker.variable} ${lato.variable} ${playfairDisplay.variable}`}>
-				<Provider
-					attribute="class"
-					defaultTheme="system"
-					enableSystem
-					disableTransitionOnChange >
 					{children}
-				</Provider>
 			</body>
 		</html>
 	)
