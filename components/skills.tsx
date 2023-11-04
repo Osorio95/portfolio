@@ -1,10 +1,7 @@
 import React from 'react'
 import Text from "@/components/ui/text"
-import Image from "next/image"
 import Slider from 'react-slick'
 
-import { Popover, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
