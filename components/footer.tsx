@@ -19,17 +19,27 @@ const Footer = () => {
     ]
 
     return (
-        <footer className='grid grid-cols-8'>
+        <footer className='flex flex-col xl:grid xl:grid-cols-8'>
             <div className="col-span-4 flex flex-col -mt-12 pt-1">
                 <Text variant='tusker-2'>
                     LET&apos;S
                 </Text>
-                <Text className='-mt-16' variant='tusker-2'>
+                <Text className='-mt-2 xl:-mt-16' variant='tusker-2'>
                     CONNECT!
                 </Text>
             </div>
             <div className="col-span-4 flex flex-col gap-6">
-                <div className="flex flex-col gap-4">
+                <div className="flex order-1 xl:order-2 items-center self-end gap-4 uppercase">
+                    <Text variant='lato-2'>
+                        Are you minding a project?
+                    </Text>
+                    <Button variant='filled'>
+                        <Text className='text-custom-black' variant='lato-2'>
+                            Contact me
+                        </Text>
+                    </Button>
+                </div>
+                <div className="flex order-2 xl:order-1 flex-col gap-4">
                     <Text variant='playfair-1'>
                         I&apos;m always interested in
                     </Text>
@@ -43,18 +53,7 @@ const Footer = () => {
                         ))}
                     </div>
                 </div>
-
-                <div className="flex items-center self-end gap-4 uppercase">
-                    <Text variant='lato-2'>
-                        I&apos;m always interested in
-                    </Text>
-                    <Button variant='filled'>
-                        <Text className='text-custom-black' variant='lato-2'>
-                            Contact me
-                        </Text>
-                    </Button>
-                </div>
-                <div className="flex flex-wrap gap-8 self-end">
+                <div className="flex order-3 xl:order-3 flex-wrap gap-8 self-end">
                     {socials.map((social, idx) => (
                         <Link key={idx} href={social.url}>
                             <Text variant='lato-2' className='uppercase'>

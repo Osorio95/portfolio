@@ -5,7 +5,7 @@ const About = () => {
 
     return (
         <section className='grid grid-cols-8'>
-            <div className="col-start-2 col-span-4 flex flex-col gap-8">
+            <div className="col-start-1 xl:col-start-2 col-span-8 xl:col-span-4 flex flex-col gap-8">
                 <Text variant='tusker-3'>
                     About me
                 </Text>

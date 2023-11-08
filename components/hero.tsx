@@ -5,7 +5,7 @@ import Button from './ui/button'
 const Hero = () => {
     return (
         <section id="header" className="w-full grid grid-cols-12 pt-24">
-            <div className="col-span-9">
+            <div className="col-span-12 xl:col-span-9">
                 <div className="flex flex-row items-center">
                     <Text variant='tusker-1'>
                         FRONT
@@ -17,11 +17,11 @@ const Hero = () => {
                         END
                     </Text>
                 </div>
-                <Text className='-mt-16 -mb-6' variant='tusker-1'>
+                <Text className='-mt-8 xl:-mt-16 xl:-mb-6' variant='tusker-1'>
                     DEVELOPER
                 </Text>
             </div>
-            <div className="col-span-3 self-end">
+            <div className="col-span-12 xl:col-span-3 self-end">
                 <Text className='text-right' variant='playfair-1'>
                     I&apos;m David Osorio
                     <br />
@@ -31,7 +31,7 @@ const Hero = () => {
                 </Text>
             </div>
             <div className="col-span-12 mt-12">
-                <Button variant='transparent'>
+                <Button className='w-full xl:w-fit' variant='transparent'>
                     <Text variant='lato-1'>
                         Contact me
                     </Text>

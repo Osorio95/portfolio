@@ -4,13 +4,14 @@ import classNames from 'classnames'
 
 type Props = {
     children: React.ReactNode
+    className?: string
     callback?: () => void
     variant: 'transparent' | 'filled'
 }
 
-const Button = ({ children, callback = () => { }, variant }: Props) => {
+const Button = ({ children, className = "", callback = () => { }, variant }: Props) => {
 
-    const className = 'border-2 border-custom-white py-2 px-8'
+    const newClassNames = classNames('border-2 border-custom-white py-2 px-8', className)
 
     const variants = {
         transparent: 'bg-transparent',
@@ -18,7 +19,7 @@ const Button = ({ children, callback = () => { }, variant }: Props) => {
     }
 
     return (
-        <button className={classNames(variants[variant], className)} onClick={() => callback()}>
+        <button className={classNames(variants[variant], newClassNames)} onClick={() => callback()}>
             {children}
         </button>
     )
