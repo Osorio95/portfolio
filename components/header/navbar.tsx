@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Text from '../ui/text'
+import { track } from '@vercel/analytics';
 
 type Props = {
     mobileNavbar: boolean
@@ -17,7 +18,7 @@ const Navbar = ({ mobileNavbar, setMobileNavbar }: Props) => {
         <>
             <nav className='hidden xl:flex flex-row justify-center pt-6 gap-8'>
                 {links.map((link, idx) =>
-                    <Link key={idx} href={link.href} target={link.target}>
+                    <Link key={idx} href={link.href} target={link.target} onClick={() => { track(link.name) }}>
                         <Text variant='lato-2' className='font-lato text-custom-white'>
                             {link.name}
                             {link.icon}
