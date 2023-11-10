@@ -2,7 +2,6 @@
 import React from 'react'
 import Link from 'next/link'
 import Text from '../ui/text'
-import { links } from '../route/route'
 
 type Props = {
     mobileNavbar: boolean
@@ -10,14 +9,18 @@ type Props = {
 }
 
 const Navbar = ({ mobileNavbar, setMobileNavbar }: Props) => {
-
+const links = [
+    { name: 'home', href: '/', target: "_self", icon: null },
+    { name: 'resume', href: '/resources/cv_david_osorio.pdf', target: "_blank", icon: <span className="i-solar-square-top-down-line-duotone ml-2" /> }
+]
     return (
         <>
             <nav className='hidden xl:flex flex-row justify-center pt-6 gap-8'>
                 {links.map((link, idx) =>
-                    <Link key={idx} href={link.href}>
+                    <Link key={idx} href={link.href} target={link.target}>
                         <Text variant='lato-2' className='font-lato text-custom-white'>
                             {link.name}
+                            {link.icon}
                         </Text>
                     </Link>
                 )}
