@@ -9,10 +9,10 @@ type Props = {
 }
 
 const Navbar = ({ mobileNavbar, setMobileNavbar }: Props) => {
-const links = [
-    { name: 'home', href: '/', target: "_self", icon: null },
-    { name: 'resume', href: '/resources/cv_david_osorio.pdf', target: "_blank", icon: <span className="i-solar-square-top-down-line-duotone ml-2" /> }
-]
+    const links = [
+        { name: 'home', href: '/', target: "_self", icon: null },
+        { name: 'resume', href: '/resources/cv_david_osorio.pdf', target: "_blank", icon: <span className="i-solar-square-top-down-line-duotone ml-2" /> }
+    ]
     return (
         <>
             <nav className='hidden xl:flex flex-row justify-center pt-6 gap-8'>
